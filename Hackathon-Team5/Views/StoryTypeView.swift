@@ -1,36 +1,94 @@
 import SwiftUI
 
-struct StoryTypeView : View {
-    
+enum StoryType: String, CaseIterable {
+    case sleep = "Dormir"
+    case together = "Ler junto"
+}
+
+struct SegmentControlItem {
+    var type: StoryType
+    var iconString: String
+}
+
+struct StoryTypeView: View {
+
+    @State private var selectedStoryType: StoryType = .sleep
+
+    let options: [SegmentControlItem] = [
+        SegmentControlItem(type: .sleep, iconString: "moon.zzz"),
+        SegmentControlItem(type: .together, iconString: "books.vertical")
+    ]
+
     var body: some View {
         VStack {
-            HStack {
-                Button {
-                    
-                } label: {
-                    Image(systemName: "powersleep")
-                    Text("Dormir")
+            Text("Essa história será contada para a criança dormir ou para ter um momento de leitura em família?")
+                .font(.headline)
+                .multilineTextAlignment(.leading)
+
+            SegmentControl(
+                selectedIndex: $selectedStoryType,
+                options: options
+            )
+            .frame(height: 30)
+            .padding(.top, 20)
+
+            Spacer()
+
+
+            if selectedStoryType == .sleep {
+                NavigationLink(destination: ScrollableStoryBookView()) {
+                    createButton
                 }
-                .buttonStyle(.bordered).tint(.blue)
-                
-                Button {
-                    
-                } label: {
-                    Image(systemName: "book")
-                    Text("Junto")
+            } else {
+                NavigationLink(destination: StoryBookView()) {
+                    createButton
                 }
-                .buttonStyle(.bordered).tint(.purple)
-            }.padding(20)
-            
-            Button {
-                
-            } label: {
-                Image(systemName: "checkmark")
-                Text("Criar")
-            }.buttonStyle(.bordered).tint(.green)
-            
+            }
         }
-        
+        .navigationTitle("História")
+        .navigationBarTitleDisplayMode(.inline)
+        .padding(.all, 20)
+    }
+
+    private var createButton: some View {
+        Text("Criar história")
+            .frame(maxWidth: .infinity)
+            .frame(height: 50)
+            .multilineTextAlignment(.center)
+            .background(.blue)
+            .foregroundColor(.white)
+            .cornerRadius(25)
+    }
+}
+
+struct SegmentControl: View {
+    @Binding var selectedIndex: StoryType
+    let options: [SegmentControlItem]
+
+    var body: some View {
+        HStack(spacing: 0) {
+            ForEach(options, id: \.type) { option in
+                HStack(spacing: 6) {
+                    Image(systemName: option.iconString)
+                    Text(option.type.rawValue)
+                }
+                .foregroundColor(selectedIndex == option.type ? .white : .primary)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(selectedIndex == option.type ? Color.blue : Color.clear)
+                .cornerRadius(30)
+                .onTapGesture {
+                    withAnimation(.easeInOut(duration: 0.150)) {
+                        selectedIndex = option.type
+                    }
+                }
+            }
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 30)
+                .stroke(Color.gray.opacity(0.5), lineWidth: 1)
+                .foregroundColor(.clear)
+        )
     }
 }
 
