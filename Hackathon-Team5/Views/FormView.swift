@@ -35,14 +35,14 @@ struct FormView: View {
             }
             .padding(.all, 20)
 
-            NavigationLink(destination: StoryBookView()) {
-                Text("Criar")
+            NavigationLink(destination: StoryTypeView()) {
+                Text("Confirmar")
                     .frame(maxWidth: .infinity)
-                    .frame(height: 40)
+                    .frame(height: 50)
                     .multilineTextAlignment(.center)
                     .background(.blue)
                     .foregroundColor(.white)
-                    .cornerRadius(20)
+                    .cornerRadius(25)
                     .padding(.all, 20)
             }
         }
