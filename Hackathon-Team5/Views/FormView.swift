@@ -7,10 +7,27 @@ struct FormView: View {
     @State private var isThemePickerVisible = false
     @State private var selectedPlace = ""
     @State private var isPlacePickerVisible = false
+    
+    @ObservedObject private var api: TellYaApi
 
-    private var themes = ["Aventura", "Conto de fadas"]
-    private var places = ["Floresta", "Castelo"]
-
+    private var themes = getThemes()
+    private var places = getPlaces()
+    
+    init(api: TellYaApi) {
+        self.api = api
+    }
+    
+    private func generateStory() {
+        let storyRequest = StoryRequest(
+            character: "princess",
+            theme: self.selectedTheme,
+            place: self.selectedPlace,
+            elements: ["unicorn", "castle", "magic wand"],
+            kid: Kid(name: self.name, age: Int(age) ?? 0)
+        )
+        self.api.generateStory(story: storyRequest)
+    }
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -37,6 +54,9 @@ struct FormView: View {
                         .foregroundColor(.white)
                         .cornerRadius(5)
                         .padding(.vertical, 5)
+                        .onTapGesture {
+                            generateStory()
+                        }
                 }
             }
         }
@@ -147,5 +167,5 @@ struct FormView: View {
 }
 
 #Preview {
-    FormView()
+    FormView(api: .init(initialState: .init()))
 }
