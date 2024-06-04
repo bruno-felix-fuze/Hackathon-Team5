@@ -26,9 +26,24 @@ struct FormView: View {
 
                 placeForm
 
+                Spacer()
+
+                NavigationLink(destination: StoryBookView()) {
+                    Text("Criar")
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 40)
+                        .multilineTextAlignment(.center)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(5)
+                        .padding(.vertical, 5)
+                }
             }
         }
         .padding(.all, 20)
+        .navigationTitle("História")
+        .navigationBarTitleDisplayMode(.inline)
+
     }
 
     private var childForm: some View {

@@ -22,6 +22,7 @@
 		ACAA6F702C0F5F0900EE3703 /* PlaceEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F6F2C0F5F0900EE3703 /* PlaceEnum.swift */; };
 		ACAA6F722C0F5FC100EE3703 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F712C0F5FC100EE3703 /* Elements.swift */; };
 		ACAA6F752C0F7B3E00EE3703 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F742C0F7B3E00EE3703 /* MainService.swift */; };
+		F6B72E0E2C0F930E00C558DB /* ScrollableStoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B72E0D2C0F930E00C558DB /* ScrollableStoryBookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		ACAA6F6F2C0F5F0900EE3703 /* PlaceEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceEnum.swift; sourceTree = "<group>"; };
 		ACAA6F712C0F5FC100EE3703 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		ACAA6F742C0F7B3E00EE3703 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		F6B72E0D2C0F930E00C558DB /* ScrollableStoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableStoryBookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				AC28B3A92C0F8B4C004DE797 /* CharacterListView.swift */,
 				AC28B3AD2C0F8BC0004DE797 /* CharacterView.swift */,
 				AC28B3AB2C0F8B97004DE797 /* FormView.swift */,
+				F6B72E0D2C0F930E00C558DB /* ScrollableStoryBookView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				ACAA6F722C0F5FC100EE3703 /* Elements.swift in Sources */,
 				ACAA6F572C0E4F7400EE3703 /* TellYaApp.swift in Sources */,
 				ACAA6F6C2C0F5D6800EE3703 /* StoryRequest.swift in Sources */,
+				F6B72E0E2C0F930E00C558DB /* ScrollableStoryBookView.swift in Sources */,
 				ACAA6F702C0F5F0900EE3703 /* PlaceEnum.swift in Sources */,
 				ACAA6F752C0F7B3E00EE3703 /* MainService.swift in Sources */,
 				ACAA6F6E2C0F5E0A00EE3703 /* ThemeEnum.swift in Sources */,
@@ -265,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -322,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -345,8 +349,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,8 +376,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
