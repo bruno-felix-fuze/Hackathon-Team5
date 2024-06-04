@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct StoryBookView: View {
+struct StoryBookView : View {
     
     var body: some View {
         VStack(spacing: 0) {
