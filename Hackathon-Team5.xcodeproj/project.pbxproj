@@ -11,6 +11,7 @@
 		ACAA6F592C0E4F7400EE3703 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F582C0E4F7400EE3703 /* ContentView.swift */; };
 		ACAA6F5B2C0E4F7600EE3703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAA6F5A2C0E4F7600EE3703 /* Assets.xcassets */; };
 		ACAA6F5E2C0E4F7600EE3703 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAA6F5D2C0E4F7600EE3703 /* Preview Assets.xcassets */; };
+		ACAA6F652C0F290100EE3703 /* StoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F642C0F290100EE3703 /* StoryBookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		ACAA6F582C0E4F7400EE3703 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ACAA6F5A2C0E4F7600EE3703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACAA6F5D2C0E4F7600EE3703 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACAA6F642C0F290100EE3703 /* StoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				ACAA6F562C0E4F7400EE3703 /* Hackathon_Team5App.swift */,
 				ACAA6F582C0E4F7400EE3703 /* ContentView.swift */,
+				ACAA6F642C0F290100EE3703 /* StoryBookView.swift */,
 				ACAA6F5A2C0E4F7600EE3703 /* Assets.xcassets */,
 				ACAA6F5C2C0E4F7600EE3703 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAA6F652C0F290100EE3703 /* StoryBookView.swift in Sources */,
 				ACAA6F592C0E4F7400EE3703 /* ContentView.swift in Sources */,
 				ACAA6F572C0E4F7400EE3703 /* Hackathon_Team5App.swift in Sources */,
 			);
