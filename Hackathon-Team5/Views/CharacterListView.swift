@@ -10,7 +10,7 @@ struct CharacterListView: View {
                 spacing: 20
             ) {
                 ForEach(data, id: \.self) { index in
-                    NavigationLink(destination: FormView()) {
+                    NavigationLink(destination: FormView(api: .init(initialState: .init()))) {
                         CharacterView(image: .cao)
                     }
                 }

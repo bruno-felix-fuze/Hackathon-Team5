@@ -2,11 +2,12 @@ import Foundation
 
 struct StoryResponse : Codable, Identifiable {
     var id: Int? = nil
-    let text: String
-    let imageUrl: String
+    var page: Int = 0
+    var text: String = ""
+    var illustration: String = ""
 }
 
 struct StoryResponseList : Codable, Identifiable {
     var id: Int? = nil
-    let story: [StoryResponse]
+    var story: [StoryResponse] = Array()
 }
