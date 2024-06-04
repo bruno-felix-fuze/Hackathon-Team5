@@ -7,7 +7,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Group {
-                CharacterListView(data: data)
+                CharacterListView()
             }
             .navigationTitle("Personagens")
         }
