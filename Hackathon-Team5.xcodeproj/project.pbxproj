@@ -10,6 +10,7 @@
 		AC28B3AA2C0F8B4C004DE797 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3A92C0F8B4C004DE797 /* CharacterListView.swift */; };
 		AC28B3AC2C0F8B97004DE797 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3AB2C0F8B97004DE797 /* FormView.swift */; };
 		AC28B3AE2C0F8BC0004DE797 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3AD2C0F8BC0004DE797 /* CharacterView.swift */; };
+		AC28B3B02C0F91D0004DE797 /* StoryTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3AF2C0F91D0004DE797 /* StoryTypeView.swift */; };
 		ACAA6F572C0E4F7400EE3703 /* TellYaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F562C0E4F7400EE3703 /* TellYaApp.swift */; };
 		ACAA6F592C0E4F7400EE3703 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F582C0E4F7400EE3703 /* ContentView.swift */; };
 		ACAA6F5B2C0E4F7600EE3703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAA6F5A2C0E4F7600EE3703 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		AC28B3A92C0F8B4C004DE797 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		AC28B3AB2C0F8B97004DE797 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		AC28B3AD2C0F8BC0004DE797 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		AC28B3AF2C0F91D0004DE797 /* StoryTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTypeView.swift; sourceTree = "<group>"; };
 		ACAA6F532C0E4F7400EE3703 /* Hackathon-Team5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackathon-Team5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAA6F562C0E4F7400EE3703 /* TellYaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellYaApp.swift; sourceTree = "<group>"; };
 		ACAA6F582C0E4F7400EE3703 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				ACAA6F582C0E4F7400EE3703 /* ContentView.swift */,
 				ACAA6F642C0F290100EE3703 /* StoryBookView.swift */,
+				AC28B3AF2C0F91D0004DE797 /* StoryTypeView.swift */,
 				AC28B3A92C0F8B4C004DE797 /* CharacterListView.swift */,
 				AC28B3AD2C0F8BC0004DE797 /* CharacterView.swift */,
 				AC28B3AB2C0F8B97004DE797 /* FormView.swift */,
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC28B3B02C0F91D0004DE797 /* StoryTypeView.swift in Sources */,
 				AC28B3AC2C0F8B97004DE797 /* FormView.swift in Sources */,
 				AC28B3AA2C0F8B4C004DE797 /* CharacterListView.swift in Sources */,
 				ACAA6F652C0F290100EE3703 /* StoryBookView.swift in Sources */,
