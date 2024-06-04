@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct Hackathon_Team5App: App {
+struct TellYaApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

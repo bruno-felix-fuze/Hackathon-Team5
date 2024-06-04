@@ -7,20 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ACAA6F572C0E4F7400EE3703 /* Hackathon_Team5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F562C0E4F7400EE3703 /* Hackathon_Team5App.swift */; };
+		ACAA6F572C0E4F7400EE3703 /* TellYaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F562C0E4F7400EE3703 /* TellYaApp.swift */; };
 		ACAA6F592C0E4F7400EE3703 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F582C0E4F7400EE3703 /* ContentView.swift */; };
 		ACAA6F5B2C0E4F7600EE3703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAA6F5A2C0E4F7600EE3703 /* Assets.xcassets */; };
 		ACAA6F5E2C0E4F7600EE3703 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAA6F5D2C0E4F7600EE3703 /* Preview Assets.xcassets */; };
 		ACAA6F652C0F290100EE3703 /* StoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F642C0F290100EE3703 /* StoryBookView.swift */; };
+		ACAA6F672C0F52D000EE3703 /* TellYaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F662C0F52D000EE3703 /* TellYaApi.swift */; };
+		ACAA6F6A2C0F53E900EE3703 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F692C0F53E900EE3703 /* StoryResponse.swift */; };
+		ACAA6F6C2C0F5D6800EE3703 /* StoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F6B2C0F5D6800EE3703 /* StoryRequest.swift */; };
+		ACAA6F6E2C0F5E0A00EE3703 /* ThemeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F6D2C0F5E0A00EE3703 /* ThemeEnum.swift */; };
+		ACAA6F702C0F5F0900EE3703 /* PlaceEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F6F2C0F5F0900EE3703 /* PlaceEnum.swift */; };
+		ACAA6F722C0F5FC100EE3703 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F712C0F5FC100EE3703 /* Elements.swift */; };
+		ACAA6F752C0F7B3E00EE3703 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F742C0F7B3E00EE3703 /* MainService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ACAA6F532C0E4F7400EE3703 /* Hackathon-Team5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackathon-Team5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACAA6F562C0E4F7400EE3703 /* Hackathon_Team5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hackathon_Team5App.swift; sourceTree = "<group>"; };
+		ACAA6F562C0E4F7400EE3703 /* TellYaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellYaApp.swift; sourceTree = "<group>"; };
 		ACAA6F582C0E4F7400EE3703 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ACAA6F5A2C0E4F7600EE3703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACAA6F5D2C0E4F7600EE3703 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACAA6F642C0F290100EE3703 /* StoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookView.swift; sourceTree = "<group>"; };
+		ACAA6F662C0F52D000EE3703 /* TellYaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellYaApi.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		ACAA6F692C0F53E900EE3703 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
+		ACAA6F6B2C0F5D6800EE3703 /* StoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRequest.swift; sourceTree = "<group>"; };
+		ACAA6F6D2C0F5E0A00EE3703 /* ThemeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEnum.swift; sourceTree = "<group>"; };
+		ACAA6F6F2C0F5F0900EE3703 /* PlaceEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceEnum.swift; sourceTree = "<group>"; };
+		ACAA6F712C0F5FC100EE3703 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		ACAA6F742C0F7B3E00EE3703 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +67,9 @@
 		ACAA6F552C0E4F7400EE3703 /* Hackathon-Team5 */ = {
 			isa = PBXGroup;
 			children = (
-				ACAA6F562C0E4F7400EE3703 /* Hackathon_Team5App.swift */,
+				ACAA6F682C0F53D700EE3703 /* Api */,
+				ACAA6F732C0F754300EE3703 /* Model */,
+				ACAA6F562C0E4F7400EE3703 /* TellYaApp.swift */,
 				ACAA6F582C0E4F7400EE3703 /* ContentView.swift */,
 				ACAA6F642C0F290100EE3703 /* StoryBookView.swift */,
 				ACAA6F5A2C0E4F7600EE3703 /* Assets.xcassets */,
@@ -68,6 +84,27 @@
 				ACAA6F5D2C0E4F7600EE3703 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACAA6F682C0F53D700EE3703 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				ACAA6F662C0F52D000EE3703 /* TellYaApi.swift */,
+				ACAA6F692C0F53E900EE3703 /* StoryResponse.swift */,
+				ACAA6F6B2C0F5D6800EE3703 /* StoryRequest.swift */,
+				ACAA6F742C0F7B3E00EE3703 /* MainService.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		ACAA6F732C0F754300EE3703 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACAA6F6D2C0F5E0A00EE3703 /* ThemeEnum.swift */,
+				ACAA6F6F2C0F5F0900EE3703 /* PlaceEnum.swift */,
+				ACAA6F712C0F5FC100EE3703 /* Elements.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +179,14 @@
 			files = (
 				ACAA6F652C0F290100EE3703 /* StoryBookView.swift in Sources */,
 				ACAA6F592C0E4F7400EE3703 /* ContentView.swift in Sources */,
-				ACAA6F572C0E4F7400EE3703 /* Hackathon_Team5App.swift in Sources */,
+				ACAA6F722C0F5FC100EE3703 /* Elements.swift in Sources */,
+				ACAA6F572C0E4F7400EE3703 /* TellYaApp.swift in Sources */,
+				ACAA6F6C2C0F5D6800EE3703 /* StoryRequest.swift in Sources */,
+				ACAA6F702C0F5F0900EE3703 /* PlaceEnum.swift in Sources */,
+				ACAA6F752C0F7B3E00EE3703 /* MainService.swift in Sources */,
+				ACAA6F6E2C0F5E0A00EE3703 /* ThemeEnum.swift in Sources */,
+				ACAA6F672C0F52D000EE3703 /* TellYaApi.swift in Sources */,
+				ACAA6F6A2C0F53E900EE3703 /* StoryResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
