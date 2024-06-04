@@ -12,38 +12,42 @@ struct FormView: View {
     private var places = ["Floresta", "Castelo"]
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                childForm
+        VStack {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    childForm
 
-                Spacer()
-                    .frame(height: 30)
+                    Spacer()
+                        .frame(height: 30)
 
-                themeForm
+                    themeForm
 
-                Spacer()
-                    .frame(height: 30)
+                    Spacer()
+                        .frame(height: 30)
 
-                placeForm
+                    placeForm
 
-                Spacer()
+                    Spacer()
+                        .frame(height: 30)
 
-                NavigationLink(destination: StoryBookView()) {
-                    Text("Criar")
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 40)
-                        .multilineTextAlignment(.center)
-                        .background(.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(5)
-                        .padding(.vertical, 5)
+                    tags
                 }
             }
+            .padding(.all, 20)
+
+            NavigationLink(destination: StoryBookView()) {
+                Text("Criar")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 40)
+                    .multilineTextAlignment(.center)
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .padding(.all, 20)
+            }
         }
-        .padding(.all, 20)
         .navigationTitle("História")
         .navigationBarTitleDisplayMode(.inline)
-
     }
 
     private var childForm: some View {
@@ -142,6 +146,19 @@ struct FormView: View {
             }
             .animation(.default)
             .transition(.opacity)
+        }
+    }
+
+    private var tags: some View {
+        Group {
+            Text("Complemente sua história selecionando elementos que devem ser incluídos")
+                .font(.caption)
+                .foregroundColor(.gray)
+
+            Spacer()
+                .frame(height: 20)
+
+            SelectableTagsView()
         }
     }
 }
