@@ -11,6 +11,7 @@
 		AC28B3AC2C0F8B97004DE797 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3AB2C0F8B97004DE797 /* FormView.swift */; };
 		AC28B3AE2C0F8BC0004DE797 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3AD2C0F8BC0004DE797 /* CharacterView.swift */; };
 		AC28B3B02C0F91D0004DE797 /* StoryTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3AF2C0F91D0004DE797 /* StoryTypeView.swift */; };
+		AC3749062C0FF12D007FAA12 /* MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AC3749052C0FF12D007FAA12 /* MockResponse.json */; };
 		ACAA6F572C0E4F7400EE3703 /* TellYaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F562C0E4F7400EE3703 /* TellYaApp.swift */; };
 		ACAA6F592C0E4F7400EE3703 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F582C0E4F7400EE3703 /* ContentView.swift */; };
 		ACAA6F5B2C0E4F7600EE3703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAA6F5A2C0E4F7600EE3703 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		AC28B3AB2C0F8B97004DE797 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		AC28B3AD2C0F8BC0004DE797 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		AC28B3AF2C0F91D0004DE797 /* StoryTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTypeView.swift; sourceTree = "<group>"; };
+		AC3749052C0FF12D007FAA12 /* MockResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockResponse.json; sourceTree = "<group>"; };
 		ACAA6F532C0E4F7400EE3703 /* Hackathon-Team5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackathon-Team5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAA6F562C0E4F7400EE3703 /* TellYaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellYaApp.swift; sourceTree = "<group>"; };
 		ACAA6F582C0E4F7400EE3703 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				ACAA6F692C0F53E900EE3703 /* StoryResponse.swift */,
 				ACAA6F6B2C0F5D6800EE3703 /* StoryRequest.swift */,
 				ACAA6F742C0F7B3E00EE3703 /* MainService.swift */,
+				AC3749052C0FF12D007FAA12 /* MockResponse.json */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				ACAA6F5E2C0E4F7600EE3703 /* Preview Assets.xcassets in Resources */,
 				ACAA6F5B2C0E4F7600EE3703 /* Assets.xcassets in Resources */,
+				AC3749062C0FF12D007FAA12 /* MockResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,12 @@ import SwiftUI
 
 struct CharacterView: View {
     let imageName: String
+    let characterName: String
 
     var body: some View {
         ZStack {
             Circle()
-                .fill(.white.shadow(.drop(color: .black.opacity(0.2), radius: 4)))
+                .fill(.white.shadow(.drop(color: .black.opacity(0.4), radius: 4)))
                 .frame(width: 150, height: 150)
 
             Image(imageName)
@@ -26,5 +27,5 @@ struct CharacterView: View {
 }
 
 #Preview {
-    CharacterView(imageName: "character0")
+    CharacterView(imageName: "character0", characterName: "princess")
 }

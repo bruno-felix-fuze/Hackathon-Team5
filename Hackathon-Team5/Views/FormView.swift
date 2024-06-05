@@ -8,26 +8,11 @@ struct FormView: View {
     @State private var selectedPlace = ""
     @State private var isPlacePickerVisible = false
     
-    @ObservedObject private var api: TellYaApi
-
     private var themes = getThemes()
     private var places = getPlaces()
     
-    init(api: TellYaApi) {
-        self.api = api
-    }
-    
-    private func generateStory() {
-        let storyRequest = StoryRequest(
-            character: "princess",
-            theme: self.selectedTheme,
-            place: self.selectedPlace,
-            elements: ["unicorn", "castle", "magic wand"],
-            kid: Kid(name: self.name, age: Int(age) ?? 0)
-        )
-        self.api.generateStory(story: storyRequest)
-    }
-    
+    let defaults = UserDefaults.standard
+
     var body: some View {
         VStack {
             ScrollView {
@@ -52,7 +37,9 @@ struct FormView: View {
             }
             .padding(.all, 20)
 
-            NavigationLink(destination: StoryTypeView()) {
+            NavigationLink(destination: StoryTypeView(
+                api: .init(initialState: .init())
+            )) {
                 Text("Confirmar")
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
@@ -61,10 +48,12 @@ struct FormView: View {
                     .foregroundColor(.white)
                     .cornerRadius(25)
                     .padding(.all, 20)
-                    .onTapGesture {
-                        generateStory()
-                    }
-            }
+            }.simultaneousGesture(TapGesture().onEnded {
+                defaults.set(self.name, forKey: "name")
+                defaults.set(self.age, forKey: "age")
+                defaults.set(self.selectedTheme, forKey: "theme")
+                defaults.set(self.selectedPlace, forKey: "place")
+            })
         }
         .navigationTitle("História")
         .navigationBarTitleDisplayMode(.inline)
@@ -184,5 +173,5 @@ struct FormView: View {
 }
 
 #Preview {
-    FormView(api: .init(initialState: .init()))
+    FormView()
 }

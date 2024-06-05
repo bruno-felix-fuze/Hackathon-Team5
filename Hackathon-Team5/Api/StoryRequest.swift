@@ -1,7 +1,6 @@
 import Foundation
 
-struct StoryRequest : Codable, Identifiable {
-    var id: Int? = nil
+struct StoryRequest : Codable {
     let character: String
     let theme: String
     let place: String
@@ -9,8 +8,7 @@ struct StoryRequest : Codable, Identifiable {
     let kid: Kid
 }
 
-struct Kid : Codable, Identifiable {
-    var id: Int? = nil
+struct Kid : Codable {
     let name: String
     let age: Int
 }

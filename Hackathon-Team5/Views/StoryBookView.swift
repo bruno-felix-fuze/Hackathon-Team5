@@ -1,28 +1,37 @@
 import SwiftUI
 
 struct StoryBookView: View {
+    
+    @ObservedObject private var api: TellYaApi
+    
+    init(api: TellYaApi) {
+        self.api = api
+    }
 
-    let pages = [
-        "Era uma vez em um mundo muito distante...",
-        "Havia uma pequena aldeia cheia de amizade e alegria...",
-        "Dentro da aldeia, uma criança tinha uma história para contar..."
-    ]
-
-    var body: some View {
+    var body: some View {        
         TabView {
-            ForEach(pages.indices, id: \.self) { index in
-                VStack(spacing: 0) {
-                    Rectangle()
-                        .fill(.black)
-                        .frame(height: 500)
-                    ZStack {
-                        Rectangle()
-                            .fill(.white)
-                        Text(pages[index])
-                            .font(.system(size: 22, weight: .semibold))
-                            .multilineTextAlignment(.center)
+            ForEach(api.story.indices, id: \.self) { index in
+                GeometryReader { gp in
+                    VStack() {
+                        ZStack {
+                            AsyncImage(url: URL(string: api.story[index].illustration)) { image in
+                                image.resizable()
+                            } placeholder: {
+                                Color.gray.opacity(0.3)
+                            }.frame(width: gp.size.width, height: gp.size.height * 0.7)
+                                .aspectRatio(contentMode: .fit)
+                                
+                        }.frame(width: gp.size.width, height: gp.size.height * 0.7)
+
+                        ZStack {
+                            Rectangle()
+                                .fill(.white)
+                            Text(api.story[index].text)
+                                .font(.system(size: 22, weight: .semibold))
+                                .multilineTextAlignment(.center)
+                                .padding()
+                        }.frame(width: gp.size.width, height: gp.size.height * 0.3)
                     }
-                    .padding()
                 }
             }
         }
@@ -33,5 +42,5 @@ struct StoryBookView: View {
 
 
 #Preview {
-    StoryBookView()
+    StoryBookView(api: .init(initialState: .init()))
 }
