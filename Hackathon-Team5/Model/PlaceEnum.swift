@@ -4,7 +4,7 @@ enum PlaceEnum : String {
     case Forest = "Floresta"
     case City = "Cidade"
     case Beach = "Praia"
-    case DeepOcean = "Fundo do Mar"
+    case DeepOcean = "Oceano"
     case School = "Escola"
 }
 

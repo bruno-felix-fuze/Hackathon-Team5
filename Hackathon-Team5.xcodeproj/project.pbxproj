@@ -11,6 +11,7 @@
 		AC28B3AC2C0F8B97004DE797 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3AB2C0F8B97004DE797 /* FormView.swift */; };
 		AC28B3AE2C0F8BC0004DE797 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3AD2C0F8BC0004DE797 /* CharacterView.swift */; };
 		AC28B3B02C0F91D0004DE797 /* StoryTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28B3AF2C0F91D0004DE797 /* StoryTypeView.swift */; };
+		AC3749062C0FF12D007FAA12 /* MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AC3749052C0FF12D007FAA12 /* MockResponse.json */; };
 		ACAA6F572C0E4F7400EE3703 /* TellYaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F562C0E4F7400EE3703 /* TellYaApp.swift */; };
 		ACAA6F592C0E4F7400EE3703 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F582C0E4F7400EE3703 /* ContentView.swift */; };
 		ACAA6F5B2C0E4F7600EE3703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAA6F5A2C0E4F7600EE3703 /* Assets.xcassets */; };
@@ -25,6 +26,8 @@
 		ACAA6F752C0F7B3E00EE3703 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA6F742C0F7B3E00EE3703 /* MainService.swift */; };
 		F6B72E0E2C0F930E00C558DB /* ScrollableStoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B72E0D2C0F930E00C558DB /* ScrollableStoryBookView.swift */; };
 		F6B72E102C0F9BD100C558DB /* SelectableTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B72E0F2C0F9BD100C558DB /* SelectableTagsView.swift */; };
+		F6B72E122C0FD73F00C558DB /* SelectableTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B72E112C0FD73F00C558DB /* SelectableTag.swift */; };
+		F6B72E142C0FD76300C558DB /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B72E132C0FD76300C558DB /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,7 @@
 		AC28B3AB2C0F8B97004DE797 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		AC28B3AD2C0F8BC0004DE797 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		AC28B3AF2C0F91D0004DE797 /* StoryTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTypeView.swift; sourceTree = "<group>"; };
+		AC3749052C0FF12D007FAA12 /* MockResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockResponse.json; sourceTree = "<group>"; };
 		ACAA6F532C0E4F7400EE3703 /* Hackathon-Team5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackathon-Team5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAA6F562C0E4F7400EE3703 /* TellYaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellYaApp.swift; sourceTree = "<group>"; };
 		ACAA6F582C0E4F7400EE3703 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		ACAA6F742C0F7B3E00EE3703 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		F6B72E0D2C0F930E00C558DB /* ScrollableStoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableStoryBookView.swift; sourceTree = "<group>"; };
 		F6B72E0F2C0F9BD100C558DB /* SelectableTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableTagsView.swift; sourceTree = "<group>"; };
+		F6B72E112C0FD73F00C558DB /* SelectableTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableTag.swift; sourceTree = "<group>"; };
+		F6B72E132C0FD76300C558DB /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 				ACAA6F692C0F53E900EE3703 /* StoryResponse.swift */,
 				ACAA6F6B2C0F5D6800EE3703 /* StoryRequest.swift */,
 				ACAA6F742C0F7B3E00EE3703 /* MainService.swift */,
+				AC3749052C0FF12D007FAA12 /* MockResponse.json */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -129,6 +136,8 @@
 				ACAA6F6D2C0F5E0A00EE3703 /* ThemeEnum.swift */,
 				ACAA6F6F2C0F5F0900EE3703 /* PlaceEnum.swift */,
 				ACAA6F712C0F5FC100EE3703 /* Elements.swift */,
+				F6B72E112C0FD73F00C558DB /* SelectableTag.swift */,
+				F6B72E132C0FD76300C558DB /* Character.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			files = (
 				ACAA6F5E2C0E4F7600EE3703 /* Preview Assets.xcassets in Resources */,
 				ACAA6F5B2C0E4F7600EE3703 /* Assets.xcassets in Resources */,
+				AC3749062C0FF12D007FAA12 /* MockResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,12 +215,14 @@
 			files = (
 				AC28B3B02C0F91D0004DE797 /* StoryTypeView.swift in Sources */,
 				AC28B3AC2C0F8B97004DE797 /* FormView.swift in Sources */,
+				F6B72E122C0FD73F00C558DB /* SelectableTag.swift in Sources */,
 				AC28B3AA2C0F8B4C004DE797 /* CharacterListView.swift in Sources */,
 				ACAA6F652C0F290100EE3703 /* StoryBookView.swift in Sources */,
 				ACAA6F592C0E4F7400EE3703 /* ContentView.swift in Sources */,
 				AC28B3AE2C0F8BC0004DE797 /* CharacterView.swift in Sources */,
 				ACAA6F722C0F5FC100EE3703 /* Elements.swift in Sources */,
 				ACAA6F572C0E4F7400EE3703 /* TellYaApp.swift in Sources */,
+				F6B72E142C0FD76300C558DB /* Character.swift in Sources */,
 				ACAA6F6C2C0F5D6800EE3703 /* StoryRequest.swift in Sources */,
 				F6B72E0E2C0F930E00C558DB /* ScrollableStoryBookView.swift in Sources */,
 				ACAA6F702C0F5F0900EE3703 /* PlaceEnum.swift in Sources */,

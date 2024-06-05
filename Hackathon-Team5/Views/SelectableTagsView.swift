@@ -7,17 +7,11 @@
 
 import SwiftUI
 
-struct SelectableTag: Identifiable {
-    let id: String
-    let text: String
-    var isSelected: Bool = false
-}
-
 struct SelectableTagsView: View {
     @State private var tags: [SelectableTag] = [
         SelectableTag(id: "1", text: "Navio"),
         SelectableTag(id: "2", text: "Pirata"),
-        SelectableTag(id: "3", text: "Tubarão"),
+        SelectableTag(id: "3", text: "Baleia"),
         SelectableTag(id: "4", text: "Tempestade"),
         SelectableTag(id: "5", text: "Carros voadores"),
         SelectableTag(id: "6", text: "Bruxa má")

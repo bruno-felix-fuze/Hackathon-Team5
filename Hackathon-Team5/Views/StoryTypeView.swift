@@ -12,8 +12,39 @@ struct SegmentControlItem {
 
 struct StoryTypeView: View {
 
+    // MARK: States
     @State private var selectedStoryType: StoryType = .sleep
+    @State private var isHidden: Bool = false
+    
+    // MARK: Observers
+    @ObservedObject private var api: TellYaApi
+    
+    let defaults = UserDefaults.standard
+    var character: String = ""
+    var name: String = ""
+    var age: String = ""
+    var theme: String = ""
+    var place: String = ""
+    
+    private func generateStory() {
+        let storyRequest = StoryRequest(
+            character: defaults.object(forKey:"character") as? String ?? "",
+            theme: defaults.object(forKey:"theme") as? String ?? "",
+            place: defaults.object(forKey:"place") as? String ?? "",
+            elements: ["ship", "pirate", "shark", "storm"],
+            kid: Kid(
+                name: defaults.object(forKey:"name") as? String ?? "",
+                age: Int(defaults.object(forKey:"age") as? String ?? "0") ?? 0
+            )
+        )
+        //self.api.mockGenerateStory()
+        self.api.generateStory(story: storyRequest)
+    }
 
+    init(api: TellYaApi) {
+        self.api = api
+    }
+    
     let options: [SegmentControlItem] = [
         SegmentControlItem(type: .sleep, iconString: "moon.zzz"),
         SegmentControlItem(type: .together, iconString: "books.vertical")
@@ -34,20 +65,29 @@ struct StoryTypeView: View {
 
             Spacer()
 
-
-            if selectedStoryType == .sleep {
+            createButton
+            loadingProgress
+            
+            if api.isSuccess && selectedStoryType == .sleep {
                 NavigationLink(destination: ScrollableStoryBookView()) {
-                    createButton
+                    createStartButton
                 }
-            } else {
-                NavigationLink(destination: StoryBookView()) {
-                    createButton
+            } else if api.isSuccess && selectedStoryType == .together {
+                NavigationLink(destination: StoryBookView(api: self.api)) {
+                    createStartButton
                 }
             }
         }
         .navigationTitle("História")
         .navigationBarTitleDisplayMode(.inline)
         .padding(.all, 20)
+    }
+    
+    private var loadingProgress: some View {
+        VStack {
+            ProgressView().progressViewStyle(CircularProgressViewStyle())
+            Text("Criando sua história...")
+        }.opacity(isHidden && !api.isSuccess ? 1 : 0)
     }
 
     private var createButton: some View {
@@ -58,6 +98,22 @@ struct StoryTypeView: View {
             .background(.blue)
             .foregroundColor(.white)
             .cornerRadius(25)
+            .opacity(isHidden ? 0 : 1)
+            .onTapGesture {
+                isHidden = true
+                generateStory()
+            }
+    }
+    
+    private var createStartButton: some View {
+        Text("Começar")
+            .frame(maxWidth: .infinity)
+            .frame(height: 50)
+            .multilineTextAlignment(.center)
+            .background(.green)
+            .foregroundColor(.white)
+            .cornerRadius(25)
+            .opacity(isHidden && api.isSuccess ? 1 : 0)
     }
 }
 
@@ -90,8 +146,4 @@ struct SegmentControl: View {
                 .foregroundColor(.clear)
         )
     }
-}
-
-#Preview {
-    StoryTypeView()
 }

@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct CharacterListView: View {
-    let data: [Int]
+
+    let defaults = UserDefaults.standard
+    let characters = CharacterFactory().mockCharacters()
 
     var body: some View {
         ScrollView {
@@ -9,10 +11,15 @@ struct CharacterListView: View {
                 columns: [GridItem(.adaptive(minimum: 170, maximum: 170))],
                 spacing: 20
             ) {
-                ForEach(data, id: \.self) { index in
-                    NavigationLink(destination: FormView(api: .init(initialState: .init()))) {
-                        CharacterView(image: .cao)
-                    }
+                ForEach(characters, id: \.self) { character in
+                    NavigationLink(destination: FormView()) {
+                        CharacterView(
+                            imageName: character.imageName,
+                            characterName: character.description
+                        )
+                    }.simultaneousGesture(TapGesture().onEnded {
+                        defaults.set(character.description, forKey: "character")
+                    })
                 }
             }
             .padding()
@@ -21,5 +28,5 @@ struct CharacterListView: View {
 }
 
 #Preview {
-    CharacterListView(data: Array(1...6))
+    CharacterListView()
 }
