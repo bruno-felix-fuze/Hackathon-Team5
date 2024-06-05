@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterView: View {
-    let image: ImageResource
+    let imageName: String
 
     var body: some View {
         ZStack {
@@ -16,14 +16,15 @@ struct CharacterView: View {
                 .fill(.white.shadow(.drop(color: .black.opacity(0.2), radius: 4)))
                 .frame(width: 150, height: 150)
 
-            Image(image)
+            Image(imageName)
                 .resizable()
-                .frame(width: 100, height: 100)
-                .aspectRatio(contentMode: .fit)
+                .frame(width: 140, height: 140)
+                .aspectRatio(contentMode: .fill)
+                .cornerRadius(70)
         }
     }
 }
 
 #Preview {
-    CharacterView(image: .cao)
+    CharacterView(imageName: "character0")
 }

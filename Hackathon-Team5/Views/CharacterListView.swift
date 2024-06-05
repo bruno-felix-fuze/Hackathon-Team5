@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct CharacterListView: View {
-    let data: [Int]
+
+    let characters = CharacterFactory().mockCharacters()
 
     var body: some View {
         ScrollView {
@@ -9,9 +10,9 @@ struct CharacterListView: View {
                 columns: [GridItem(.adaptive(minimum: 170, maximum: 170))],
                 spacing: 20
             ) {
-                ForEach(data, id: \.self) { index in
+                ForEach(characters, id: \.self) { character in
                     NavigationLink(destination: FormView(api: .init(initialState: .init()))) {
-                        CharacterView(image: .cao)
+                        CharacterView(imageName: character.imageName)
                     }
                 }
             }
@@ -21,5 +22,5 @@ struct CharacterListView: View {
 }
 
 #Preview {
-    CharacterListView(data: Array(1...6))
+    CharacterListView()
 }
